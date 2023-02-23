@@ -21,7 +21,7 @@ else if (isNaN(numberCharacters)) {
   numberCharacters = prompt("Please enter a valid number.");
 }
 else {
-  maessage("Password is " + numberCharacters + " characters");
+  message("Password is " + numberCharacters + " characters");
   
 }
   // Add event listener to generate button
