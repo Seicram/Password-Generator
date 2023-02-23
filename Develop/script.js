@@ -13,6 +13,16 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
-// Add event listener to generate button
+numberCharacters = prompt("Choose between 6 and 134 characters");
+if (numberCharacters < 6 || numberCharacters > 134) {
+  return "Select the correct number of characters";
+}
+else if (isNaN(numberCharacters)) {
+  numberCharacters = prompt("Please enter a valid number.");
+}
+else {
+  maessage("Password is " + numberCharacters + " characters");
+  
+}
+  // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
