@@ -24,36 +24,53 @@ else {
   message("Password is " + numberCharacters + " characters");
   
 }
-  isLowercase = confirm("You can select lowercase characters");
-  if (isLowercase) {
-    var makeLowercase = alert("The password will contain lowercase characters");
+  lowerCase = confirm("You can select lowercase characters");
+  if (lowerCase) {
+    var makeLowercase = message("The password will contain lowercase characters");
   }
   else {
-    alert("The password will not have lowercase characters");
+    message("The password will not have lowercase characters");
   }
 
-  isUppercase = confirm("Uppercase characters are available");
-  if (isUppercase) {
-    alert("The password will contain uppercase characters");
+  upperCase = confirm("Uppercase characters are available");
+  if (upperCase) {
+    message("The password will contain uppercase characters");
   }
   else {
-    alert("The password will not have uppercase characters");
+    message("The password will not have uppercase characters");
   }
 
-  isNumbers = confirm("Numerical values are available");
-  if (isNumbers) {
-    alert("The password will contain numberical values");
+  numbers = confirm("Numerical values are available");
+  if (numbers) {
+    message("The password will contain numberical values");
   }
   else {
-    alert("The password will not contain numerical values");
+    message("The password will not contain numerical values");
   }
 
-  isSpecial = confirm("Special characters are available");
-  if (isSpecial) {
-    alert("The password will contain special characters");
+  special = confirm("Special characters are available");
+  if (special) {
+    message("The password will contain special characters");
   }
   else {
-    alert("The password will not contain special characters.");
+    message("The password will not contain special characters.");
+  }
+  if (lowerCase === false && upperCase === false && numbers === false && special === false) {
+    return "At least one character type must be selected";
+  };
+
+  // group selected characters
+  if (lowerCase) {
+    possibleCharacters = possibleCharacters.concat(lowercaseCharacters);
+  }
+  if (hasUppercase) {
+    possibleCharacters = possibleCharacters.concat(uppercaseCharacters);
+  }
+  if (hasNumbers) {
+    possibleCharacters = possibleCharacters.concat(numericCharacters);
+  }
+  if (hasSpecial) {
+    possibleCharacters = possibleCharacters.concat(specialCharacters);
   }
 
   
