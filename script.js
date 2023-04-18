@@ -13,7 +13,7 @@ function writePassword() {
   passwordText.value = password;
 
 }
-numbers = prompt("Choose between 6 and 134 characters");
+numbers = prompt("Choose between 8 and 128 characters");
 if (numbers < 6 || numbers > 134) {
   message: ("Select the correct number of characters");
 }
